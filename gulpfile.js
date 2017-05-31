@@ -9,7 +9,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/css/*.scss', ['minify-css']);
+  gulp.watch('./assets/css/**/*.scss', ['minify-css']);
 });
 
 gulp.task('minify-css', function() {
