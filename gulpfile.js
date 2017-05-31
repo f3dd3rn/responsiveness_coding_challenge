@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 gulp.task('default', function() {
-  gulp.start('minify-css');
   gulp.start('watch');
 });
 
@@ -17,8 +16,8 @@ gulp.task('minify-css', function() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(cleanCSS({debug: true}, function(details) {
-      console.log(details.name + ': ' + details.stats.originalSize);
-      console.log(details.name + ': ' + details.stats.minifiedSize);
+      console.log(details.name + ' before minification: ' + details.stats.originalSize);
+      console.log(details.name + ' after minification: ' + details.stats.minifiedSize);
     }))
     .pipe(gulp.dest('./assets/css/'));
 });
