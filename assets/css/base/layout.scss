@@ -1,0 +1,15 @@
+body {
+  font-family: $body-font-family;
+}
+
+h1, h2 {
+  font-family: $heading-font-family;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: $heading-font-size;
+}

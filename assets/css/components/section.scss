@@ -1,0 +1,25 @@
+.section {
+  width: 100%;
+}
+
+.section--header {
+  @include grid-media-query(desk) {
+      height: 800px;
+  }
+  height: 670px;
+
+  position: relative;
+}
+
+.section--centered {
+  text-align: center;
+}
+
+.section--patterned {
+  background-image: url('../images/pattern.jpg');
+  background-repeat: repeat;
+}
+
+.section--purple {
+  background-color: $purple;
+}
