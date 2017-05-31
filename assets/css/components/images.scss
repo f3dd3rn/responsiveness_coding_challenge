@@ -1,0 +1,12 @@
+.image--socks {
+  position: absolute;
+
+  @include grid-media-query(stationary) {
+    margin-top: -50px;
+  }
+
+  @include grid-media-query(portable) {
+    width: 460px;
+    height: 460px;
+  }
+}

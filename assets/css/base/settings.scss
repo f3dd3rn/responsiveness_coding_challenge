@@ -1,9 +1,29 @@
 // colors
 $purple: #760092;
 $dark-purple: #500064;
+$black: #000000;
+
+// buttons
+$btn-border-color: $black;
+$btn-color: $black;
 
 // font
 $heading-font-family: 'roboto';
 $body-font-family: 'roboto';
 $heading-font-size: 36px;
 $body-font-size: 16px;
+
+// grid settings
+$use-markup-fix: false;
+$gutter: 0px;
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'portable' '(max-width: 1023px)',
+    'stationary' '(min-width: 1024px)',
+    'desk' '(min-width: 1024px) and (max-width: 1200px)',
+    'wide' '(min-width: 1201px)'
+);
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'stationary', 'desk', 'wide');
+$breakpoint-has-push:   ('palm', 'lap', 'portable', 'stationary', 'desk', 'wide');
+$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'stationary', 'desk', 'wide');

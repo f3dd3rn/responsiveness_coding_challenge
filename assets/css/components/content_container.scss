@@ -1,0 +1,28 @@
+.content-container {
+  @include grid-media-query(stationary){
+    padding-top: 210px;
+    padding-bottom: 210px;
+  };
+
+  @include grid-media-query(desk){
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  @include grid-media-query(portable){
+    padding-top: 105px;
+    padding-bottom: 105px;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.content-container--centered {
+  @include grid-media-query(wide){
+    width: 1160px;
+  }
+
+  @include grid-media-query(stationary){
+    margin: 0 auto;
+  }
+}

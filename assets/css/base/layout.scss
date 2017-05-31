@@ -1,15 +1,27 @@
 body {
   font-family: $body-font-family;
+  font-size: $body-font-size;
 }
 
 h1, h2 {
   font-family: $heading-font-family;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 0;
 }
 
 h1 {
-  font-size: 48px;
+  @include grid-media-query(desk) {
+    font-size: 48px;
+  };
+  font-size: $heading-font-size;
 }
 
 h2 {
   font-size: $heading-font-size;
+}
+
+p {
+  letter-spacing: 3.13%;
+  line-height: 28px;
 }

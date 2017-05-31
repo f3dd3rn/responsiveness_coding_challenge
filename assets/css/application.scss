@@ -1,8 +1,10 @@
-@import "vendor/csswizardry-grids";
-
 @import "base/fonts";
 @import "base/settings";
+@import "vendor/csswizardry-grids";
 @import "base/layout";
 
-@import "components/section";
+@import "components/buttons";
+@import "components/content_container";
+@import "components/images";
 @import "components/logo";
+@import "components/section";
