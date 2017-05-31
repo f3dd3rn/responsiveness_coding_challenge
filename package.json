@@ -1,0 +1,23 @@
+{
+  "name": "responsiveness_coding_challenge",
+  "version": "1.0.0",
+  "description": "coding challenge on html, css and responsiveness",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/f3dd3rn/responsiveness_coding_challenge.git"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "Stephanie Feddern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f3dd3rn/responsiveness_coding_challenge/issues"
+  },
+  "homepage": "https://github.com/f3dd3rn/responsiveness_coding_challenge#readme"
+}
