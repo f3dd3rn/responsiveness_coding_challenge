@@ -1,9 +1,5 @@
 .section {
   width: 100%;
-}
-
-.section--header,
-.section--socks {
   position: relative;
 }
 
@@ -25,6 +21,10 @@
 
 .section--colored {
   background-color: $colored-section-color;
+
+  h1, h2, p {
+    color: $white;
+  }
 }
 
 .section--info-trigger{

@@ -7,34 +7,7 @@
     <meta name="keywords" content="HTML, CSS, responsive"/>
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet" />
     <link href="./assets/css/application.css" rel="stylesheet" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-        // info handling
-        function manageInfoBoxes(event) {
-          let active = document.querySelectorAll("[data-info-trigger]:checked")[0].value;
-          let infoBoxes = document.querySelectorAll("[data-info-type]");
-          for (let i = 0; i < infoBoxes.length; i++) {
-            let infoBox = infoBoxes[i];
-            if(infoBox.dataset.infoType === active) {
-              infoBox.classList.remove("hidden");
-            } else {
-              infoBox.classList.add("hidden");
-            }
-          }
-        }
-
-        function initInfoHandling() {
-          let infoTriggers = document.querySelectorAll("[data-info-trigger]");
-          for (let i = 0; i < infoTriggers.length; i++) {
-            infoTriggers[i].addEventListener("change", manageInfoBoxes);
-          }
-
-          manageInfoBoxes(null);
-        }
-
-        initInfoHandling();
-      });
-    </script>
+    <script src="./assets/javascript/application.js"></script>
   </head>
   <body>
     <section class="section section--patterned section--header">
@@ -131,7 +104,47 @@
         </div>
       </div>
     </section>
+    <a id="history" class="hidden"></a>
     <section class="section section--colored">
+      <div class="content-container content-container--centered">
+        <div class="grid">
+          <div class="grid__item">
+            <img src="./assets/images/logo_gold.png" alt="Liberty London" class="logo logo--history" />
+          </div>
+          <div class="grid__item">
+            <img src="./assets/images/haeuser.jpg" alt="Häuser" class="image image--history" />
+          </div>
+          <div class="grid__item">
+            <h2 style="text-align: center;">The History of Liberty</h2>
+          </div>
+          <div class="grid__item one-half text-container">
+            <p>
+              Arthur Lasenby Liberty was born in Chesham, Buckinghamshire in 1843. He was employed by Messrs Farmer and Rogers in Regent Street in 1862, the year of the International Exhibition at Kensington in London. By 1874, inspired by his 10 years of service, Arthur decided to start a business of his own, which he did the next year.
+            </p>
+            <p>
+              With a £2,000 loan from his future father-in-law, Arthur Liberty accepted the lease of half a shop at 218a Regent Street with only three staff members.
+            </p>
+            <p>
+              The shop opened during 1875 selling ornaments, fabric and objets d'art from Japan and the East. Within eighteen months Arthur Liberty had repaid the loan and acquired the second half of 218 Regent Street. As the business grew, neighbouring properties were bought and added.
+            </p>
+            <p>
+              In 1885, 142–144 Regent Street was acquired and housed the ever-increasing demand for carpets and furniture. The basement was named the Eastern Bazaar, and was the vending place for what was described as "decorative furnishing objects". He named the property Chesham House after the place in which he grew up. The store became the most fashionable place to shop in London and Liberty fabrics were used for both clothing and furnishings. Some of its clientele was exotic, and included famous Pre-Raphaelite artists.
+            </p>
+          </div>
+          <div class="grid__item one-half text-container">
+            <p>
+              In 1884 Liberty introduced the costume department into the Regent Street store, directed by Edward William Godwin (1833–86). Godwin was a distinguished architect. He was a founding member of the Costume Society in 1882. He and Arthur Liberty created in-house apparel to challenge the fashions of Paris.
+            </p>
+            <p>
+              In November 1885, Liberty brought forty-two villagers from India to stage a living village of Indian artisans. Liberty's specialized in Oriental goods, in particular imported Indian silks, and the aim of the display was to generate both publicity and sales for the store. However, it was a disaster commercially and publicly, with concern about the way the villagers were put on display.
+            </p>
+            <p>
+              During the 1890s Arthur Lasenby Liberty built strong relationships with many English designers. Many of these designers, including Archibald Knox, practised the artistic styles known as Arts and Crafts and Art Nouveau, and Liberty helped develop Art Nouveau through his encouragement of such designers. The company became associated with this new style, to the extent that in Italy, Art Nouveau became known as the Stile Liberty, after the London shop.
+            </p>
+            <p>
+              The store became one of the most prestigious in London.
+            </p>
+          </div>
     </section>
   </body>
 </html>

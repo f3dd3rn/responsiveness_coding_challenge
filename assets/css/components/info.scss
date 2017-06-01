@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.info--label {
-  color: $info-label-color;
-}
-
 input[type=radio][name=info]:checked + label .icon {
   background-color: $icon-active-bg-color;
 }
