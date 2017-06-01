@@ -23,6 +23,24 @@
   overflow: hidden;
 }
 
-.section--purple {
-  background-color: $purple;
+.section--colored {
+  background-color: $colored-section-color;
+}
+
+.section--info-trigger{
+  position: relative;
+
+  &:before {
+    top: 100%;
+    border: solid transparent;
+    border-width: 20px;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: $colored-section-color;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

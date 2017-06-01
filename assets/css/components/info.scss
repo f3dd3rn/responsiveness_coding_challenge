@@ -1,0 +1,23 @@
+.info {
+  text-align: center;
+}
+
+.info--label {
+  color: $info-label-color;
+}
+
+input[type=radio][name=info]:checked + label .icon {
+  background-color: $icon-active-bg-color;
+}
+
+input[type=radio][name=info][value=cotton]:checked + label[for=cotton] .icon--cotton {
+  background-image: url('../images/cotton_white.png');
+}
+
+input[type=radio][name=info][value=sock]:checked + label[for=sock] .icon--sock {
+  background-image: url('../images/socke_white.png');
+}
+
+input[type=radio][name=info][value=dots]:checked + label[for=dots] .icon--dots {
+  background-image: url('../images/dots_white.png');
+}

@@ -7,13 +7,41 @@
     <meta name="keywords" content="HTML, CSS, responsive"/>
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet" />
     <link href="./assets/css/application.css" rel="stylesheet" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        // info handling
+        function manageInfoBoxes(event) {
+          let active = document.querySelectorAll("[data-info-trigger]:checked")[0].value;
+          let infoBoxes = document.querySelectorAll("[data-info-type]");
+          for (let i = 0; i < infoBoxes.length; i++) {
+            let infoBox = infoBoxes[i];
+            if(infoBox.dataset.infoType === active) {
+              infoBox.classList.remove("hidden");
+            } else {
+              infoBox.classList.add("hidden");
+            }
+          }
+        }
+
+        function initInfoHandling() {
+          let infoTriggers = document.querySelectorAll("[data-info-trigger]");
+          for (let i = 0; i < infoTriggers.length; i++) {
+            infoTriggers[i].addEventListener("change", manageInfoBoxes);
+          }
+
+          manageInfoBoxes(null);
+        }
+
+        initInfoHandling();
+      });
+    </script>
   </head>
   <body>
     <section class="section section--patterned section--header">
       <img class="logo logo--header logo--bg-purple" src="./assets/images/logo_white.png" alt="FALKE for Liberty" />
     </section>
     <section class="section section--socks">
-      <div class="content-container content-container--centered">
+      <div class="content-container content-container--centered content-container--socks">
         <div class="grid">
           <div class="grid__item one-half">
             <h1>
@@ -32,11 +60,78 @@
         </div>
       </div>
     </section>
-    <section class="section section--purple">
+    <section class="section section--colored section--info-trigger">
+      <div class="content-container content-container--centered">
+        <ul class="grid grid--center">
+          <li class="grid__item one-third">
+            <input class="hidden" type="radio" id="cotton" value="cotton" name="info" checked="checked" data-info-trigger />
+            <label class="info info--label" for="cotton">
+              <div class="tile">
+                <div class="icon icon--cotton"></div>
+              </div>
+              <p>
+                High quality Fil d'Ecosse cotton
+              </p>
+            </label>
+          </li>
+          <li class="grid__item one-third">
+            <input class="hidden" type="radio" id="sock" value="sock" name="info" data-info-trigger />
+            <label class="info info--label" for="sock">
+              <div class="tile">
+                <div class="icon icon--sock"></div>
+              </div>
+              <p>
+                Perfect Falke Fit
+              </p>
+            </label>
+          </li>
+          <li class="grid__item one-third">
+            <input class="hidden" type="radio" id="dots" value="dots" name="info" data-info-trigger />
+            <label class="info info--label" for="dots">
+              <div class="tile">
+                <div class="icon icon--dots"></div>
+              </div>
+              <p>
+                Anti-slip cotton sole inside
+              </p>
+            </label>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="section">
+    <section class="section section--info">
+      <div class="content-container content-container--centered">
+        <div class="grid grid--center">
+          <div class="grid__item stationary--one-half">
+            <div class="info hidden" data-info-type="cotton">
+              <h2>
+                High quality Fil d'Ecosse cotton
+              </h2>
+              <p>
+                Fil d‘Ecosse ist reine „Karnak“ Baumwolle aus dem ägyptischen Nil-Delta. Nach der Entfaltung unter der südländischen Sonne werden die Fasern und Samen mühevoll aus der Baumwollwatte herausgekämmt, um ein Produkt von purer Reinheit und Weichheit zu erhalten. Italienische Spinnereien stellen aus den extralangen Fasern ein Garn her, das doppelt gezwirnt eine besondere Festigkeit und hohe Strapazierfähigkeit bietet. Durch die zusätzliche Veredlung des Merzerisierens, erhält Fil d‘Ecosse seinen seidigen Glanz und einmalige Farbintensität.
+              </p>
+            </div>
+            <div class="info hidden" data-info-type="sock">
+              <h2>
+                Perfect Falke Fit
+              </h2>
+              <p>
+                The special anatomical fit, in conjunction with the premium Fil d’Ecosse, ensures perfect FALKE comfort.
+              </p>
+            </div>
+            <div class="info hidden" data-info-type="dots">
+              <h2>
+                Anti-slip cotton sole inside
+              </h2>
+              <p>
+                The extremely lightweight, slip-resistant innersole made from cotton increases comfort and safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="section section--purple">
+    <section class="section section--colored">
     </section>
   </body>
 </html>

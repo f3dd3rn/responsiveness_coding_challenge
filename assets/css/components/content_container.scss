@@ -1,8 +1,6 @@
 .content-container {
-  @include grid-media-query(stationary){
-    padding-top: 210px;
-    padding-bottom: 210px;
-  };
+  padding-top: 105px;
+  padding-bottom: 105px;
 
   @include grid-media-query(desk){
     padding-right: 5%;
@@ -10,10 +8,15 @@
   }
 
   @include grid-media-query(portable){
-    padding-top: 105px;
-    padding-bottom: 105px;
     padding-right: 5%;
     padding-left: 5%;
+  }
+}
+
+.content-container--socks {
+  @include grid-media-query(stationary){
+    padding-top: 210px;
+    padding-bottom: 210px;
   }
 }
 

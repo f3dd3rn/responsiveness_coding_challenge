@@ -2,16 +2,27 @@
 $purple: #760092;
 $dark-purple: #500064;
 $black: #000000;
-
-// buttons
-$btn-border-color: $black;
-$btn-color: $black;
+$white: #ffffff;
 
 // font
 $heading-font-family: 'roboto';
 $body-font-family: 'roboto';
 $heading-font-size: 36px;
 $body-font-size: 16px;
+
+// buttons
+$btn-border-color: $black;
+$btn-color: $black;
+
+// icons
+$icon-bg-color: $white;
+$icon-active-bg-color: $dark-purple;
+
+// info
+$info-label-color: $white;
+
+// section
+$colored-section-color: $purple;
 
 // grid settings
 $use-markup-fix: false;
