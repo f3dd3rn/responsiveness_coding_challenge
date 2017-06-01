@@ -1,6 +1,3 @@
 /screens
 *.sketch
-*.scss
 *.zip
-gulpfile.js
-README.md
