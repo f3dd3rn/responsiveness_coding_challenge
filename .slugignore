@@ -1,5 +1,6 @@
+/screens
 *.sketch
 *.scss
-/screens
+*.zip
 gulpfile.js
 README.md
