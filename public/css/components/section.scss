@@ -21,10 +21,7 @@
 
 .section--colored {
   background-color: $colored-section-color;
-
-  h1, h2, p {
-    color: $white;
-  }
+  color: $white;
 }
 
 .section--info-trigger{

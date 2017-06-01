@@ -1,5 +1,9 @@
 .info {
   text-align: center;
+
+  span {
+    display: block;
+  }
 }
 
 input[type=radio][name=info]:checked + label .icon {

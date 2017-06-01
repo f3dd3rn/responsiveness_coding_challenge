@@ -11,12 +11,12 @@ gulp.task('default', function() {
 });
 
 gulp.task('watch', ['minify-css', 'minify-js'], function() {
-  gulp.watch('./assets/css/**/*.scss', ['minify-css']);
-  gulp.watch('./assets/javascript/**/*.js', ['minify-js']);
+  gulp.watch('./public/css/**/*.scss', ['minify-css']);
+  gulp.watch('./public/javascript/**/*.js', ['minify-js']);
 });
 
 gulp.task('minify-css', function() {
-  gulp.src('./assets/css/application.scss')
+  gulp.src('./public/css/application.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(cleanCSS({debug: true}, function(details) {
@@ -24,16 +24,16 @@ gulp.task('minify-css', function() {
       console.log(details.name + ' after minification: ' + details.stats.minifiedSize);
     }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./assets/css/'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('minify-js', function() {
-  gulp.src('./assets/javascript/application.js')
+  gulp.src('./public/javascript/application.js')
     .pipe(plumber())
     .pipe(babel({
         presets: ['es2015']
     }))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./assets/javascript/'));
+    .pipe(gulp.dest('./public/javascript/'));
 });

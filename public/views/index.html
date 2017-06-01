@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>FALKE</title>
-    <meta charset="utf-8" http-equiv="content-type"/>
-    <meta name="description" content="Frontend coding challenge for \"Even On Sunday\""/>
-    <meta name="keywords" content="HTML, CSS, responsive"/>
+    <meta charset="utf-8" />
+    <meta name="description" content="Frontend coding challenge for Even On Sunday" />
+    <meta name="keywords" content="HTML, CSS, responsive" />
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet" />
     <link href="/css/application.min.css" rel="stylesheet" />
     <script src="/javascript/application.min.js"></script>
   </head>
   <body>
-    <section class="section section--patterned section--header">
+    <div class="section section--patterned section--header">
       <img class="logo logo--header logo--bg-purple" src="/images/logo_white.png" alt="FALKE for Liberty" />
-    </section>
-    <section class="section section--socks">
+    </div>
+    <div class="section section--socks">
       <div class="content-container content-container--centered content-container--socks">
         <div class="grid">
           <div class="grid__item one-half">
@@ -32,47 +32,47 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="section section--colored section--info-trigger">
+    </div>
+    <div class="section section--colored section--info-trigger">
       <div class="content-container content-container--centered">
         <ul class="grid grid--center">
           <li class="grid__item one-third">
             <input class="hidden" type="radio" id="cotton" value="cotton" name="info" checked="checked" data-info-trigger />
             <label class="info info--label" for="cotton">
-              <div class="tile">
-                <div class="icon icon--cotton"></div>
-              </div>
-              <p>
+              <span class="tile">
+                <span class="icon icon--cotton"></span>
+              </span>
+              <span>
                 High quality Fil d'Ecosse cotton
-              </p>
+              </span>
             </label>
           </li>
           <li class="grid__item one-third">
             <input class="hidden" type="radio" id="sock" value="sock" name="info" data-info-trigger />
             <label class="info info--label" for="sock">
-              <div class="tile">
-                <div class="icon icon--sock"></div>
-              </div>
-              <p>
+              <span class="tile">
+                <span class="icon icon--sock"></span>
+              </span>
+              <span>
                 Perfect Falke Fit
-              </p>
+              </span>
             </label>
           </li>
           <li class="grid__item one-third">
             <input class="hidden" type="radio" id="dots" value="dots" name="info" data-info-trigger />
             <label class="info info--label" for="dots">
-              <div class="tile">
-                <div class="icon icon--dots"></div>
-              </div>
-              <p>
+              <span class="tile">
+                <span class="icon icon--dots"></span>
+              </span>
+              <span>
                 Anti-slip cotton sole inside
-              </p>
+              </span>
             </label>
           </li>
         </ul>
       </div>
-    </section>
-    <section class="section section--info">
+    </div>
+    <div class="section section--info">
       <div class="content-container content-container--centered">
         <div class="grid grid--center">
           <div class="grid__item stationary--one-half">
@@ -103,9 +103,9 @@
           </div>
         </div>
       </div>
-    </section>
-    <a name="history" class="invisible"></a>
-    <section class="section section--colored">
+    </div>
+    <a id="history" class="invisible"></a>
+    <div class="section section--colored">
       <div class="content-container content-container--centered">
         <div class="grid">
           <div class="grid__item">
@@ -145,6 +145,8 @@
               The store became one of the most prestigious in London.
             </p>
           </div>
-    </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
