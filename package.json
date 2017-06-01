@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "coding challenge on html, css and responsiveness",
   "main": "app.js",
+  "engines": {
+    "node": "6.10.0"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
